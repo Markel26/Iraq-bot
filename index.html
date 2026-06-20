@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -97,7 +97,7 @@
       font-weight: 600;
       margin-top: 14px;
       margin-bottom: 8px;
-      text-align: left;
+      text-align: right; /* Поменяли на правое выравнивание для RTL */
     }
 
     .games {
@@ -146,7 +146,7 @@
       border-radius: 12px;
       padding: 12px 14px;
       outline: none;
-      text-align: left;
+      text-align: right; /* Выравнивание ввода по правому краю */
       transition: border-color 0.15s ease, box-shadow 0.15s ease;
     }
 
@@ -159,7 +159,7 @@
       font-size: 12px;
       color: var(--muted);
       margin-top: 6px;
-      text-align: left;
+      text-align: right; /* Поменяли на правое выравнивание для RTL */
     }
 
     .warn {
@@ -168,7 +168,7 @@
       font-size: 13px;
       margin-top: 8px;
       animation: flash 0.5s ease;
-      text-align: left;
+      text-align: right; /* Поменяли на правое выравнивание для RTL */
     }
 
     @keyframes flash {
@@ -296,58 +296,57 @@
 <body>
   <div class="wrap">
     <div class="card">
-      <!-- Iraq Flag -->
+      <!-- Иракский флаг -->
       <img src="https://flagcdn.com/w320/iq.png" class="flag" alt="Iraq Flag"/>
-      <div class="title">Amir Hacker</div>
-      <div class="subtitle">Fast Signals • Iraq • IQD</div>
+      <div class="title">أمير الهاكر • Amir Hacker</div>
+      <div class="subtitle">إشارات سريعة • العراق • د.ع</div>
 
       <div class="badges">
-        <div class="badge">🔒 Secure</div>
-        <div class="badge">✅ Verified</div>
-        <div class="badge">✨ AI Powered</div>
+        <div class="badge">🔒 آمن ومحمي</div>
+        <div class="badge">✅ موثق ومضمون</div>
+        <div class="badge">✨ يشتغل بالذكاء الاصطناعي</div>
       </div>
 
-      <label class="block">Select your game</label>
+      <label class="block">اختار اللعبة مالتك هسة:</label>
       <div class="games">
         <div class="game-column">
-          <label class="game"><input type="radio" name="game" value="Crash" checked> <span class="icon">💥</span> Crash</label>
-          <label class="game"><input type="radio" name="game" value="Aviator"> <span class="icon">✈️</span> Aviator</label>
-          <label class="game"><input type="radio" name="game" value="Penalty"> <span class="icon">⚽️</span> Penalty</label>
+          <label class="game"><input type="radio" name="game" value="Crash" checked> <span class="icon">💥</span> كراش</label>
+          <label class="game"><input type="radio" name="game" value="Aviator"> <span class="icon">✈️</span> أفياتور</label>
+          <label class="game"><input type="radio" name="game" value="Penalty"> <span class="icon">⚽️</span> ضربات جزاء</label>
         </div>
         <div class="game-column">
-          <label class="game"><input type="radio" name="game" value="Mines"> <span class="icon">💎</span> Mines</label>
-          <label class="game"><input type="radio" name="game" value="Chicken Road"> <span class="icon">🐔</span> Chicken Road</label>
+          <label class="game"><input type="radio" name="game" value="Mines"> <span class="icon">💎</span> الألغام</label>
+          <label class="game"><input type="radio" name="game" value="Chicken Road"> <span class="icon">🐔</span> طريق الدجاجة</label>
         </div>
       </div>
 
-      <label class="block" for="acc">1xBet Account ID</label>
-      <input id="acc" class="input" placeholder="Example: 9876543210" maxlength="10" inputmode="numeric" />
-      <div class="hint">Enter 10 digits • Currency: IQD</div>
-      <div class="warn" id="warn">Please enter a valid 10-digit ID.</div>
+      <label class="block" for="acc">معرف حساب 1xBet مالتك</label>
+      <input id="acc" class="input" placeholder="مثال: 9876543210" maxlength="10" inputmode="numeric" />
+      <div class="hint">اكتب 10 أرقام • العملة بالدينار العراقي</div>
+      <div class="warn" id="warn">الرجاء اكتب معرف حساب صحيح متكون من 10 أرقام مالتك.</div>
 
-      <button class="btn" id="start" disabled>Start</button>
+      <button class="btn" id="start" disabled>بلش هسة</button>
       <div class="progress" id="progress"><div class="bar"></div></div>
 
       <div class="meta">
-        <div>🔵 Online: <span id="online">143</span></div>
-        <div>⏳ Access expires in <span id="countdown">05:00</span></div>
+        <div>🔵 المتصلين هسة: <span id="online">143</span></div>
+        <div>⏳ ينتهي الوصول خلال <span id="countdown">05:00</span></div>
       </div>
 
-      <div class="footer">Created by <strong>HackerHouse</strong> • Bengaluru</div>
+      <div class="footer">صنع بواسطة <strong>HackerHouse</strong> • بنغالور</div>
     </div>
   </div>
 
-  <!-- Modal window in Arabic, explicitly set to Right-To-Left direction -->
+  <!-- Модальное окно полностью на иракском арабском с вашим текстом без кнопок -->
   <div id="modalOverlay" class="modal-overlay">
     <div class="modal-content" dir="rtl">
-      <div class="modal-title">خطأ في التفعيل</div>
-      <!-- Amount set to 7,500 IQD -->
-      <div class="modal-text">❌ لم يتم العثور على إيداع بقيمة 7,500 دينار عراقي. يرجى عمل إيداع والمحاولة مرة أخرى لتفعيل النظام.</div>
+      <div class="modal-title">خطأ بالتفعيل</div>
+      <div class="modal-text">❌ لازم تشحن الحساب مالتك مثل ما مكتوب بالرسالة علمود تكدر تستخدم الذكاء الاصطناعي.</div>
     </div>
   </div>
 
   <script>
-    // Countdown timer logic
+    // Логика обратного отсчета
     let timeLeft = 300;
     const countdownEl = document.getElementById('countdown');
     const timer = setInterval(() => {
@@ -361,7 +360,7 @@
       countdownEl.textContent = `${minutes}:${seconds}`;
     }, 1000);
 
-    // Simulated online users counter
+    // Имитация счетчика онлайн
     const onlineEl = document.getElementById('online');
     setInterval(() => {
       const current = parseInt(onlineEl.textContent);
@@ -369,7 +368,7 @@
       onlineEl.textContent = Math.max(130, Math.min(160, current + jitter));
     }, 3000);
 
-    // Validation logic for 10-digit ID
+    // Логика валидации ID
     const accInput = document.getElementById('acc');
     const startBtn = document.getElementById('start');
     const warnMsg = document.getElementById('warn');
@@ -380,7 +379,7 @@
       warnMsg.style.display = (accInput.value.length > 0 && !isValid) ? 'block' : 'none';
     });
 
-    // Progress bar and modal logic
+    // Логика шкалы загрузки и открытия модального окна
     const progress = document.getElementById('progress');
     const bar = progress.querySelector('.bar');
     const modal = document.getElementById('modalOverlay');
